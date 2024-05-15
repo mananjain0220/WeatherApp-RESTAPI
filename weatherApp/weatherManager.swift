@@ -9,7 +9,7 @@
 import Foundation
 
 public class WeatherManager {
-    let weatherURL = "https://api.openweathermap.org/data/2.5/weather?appid=bc7b12f446f5bc475428d400f12ace6a&units=metric"
+    let weatherURL = "https://api.openweathermap.org/data/2.5/weather?appid=youAPIkey&units=metric"
 
     func fetchWeather(cityName: String, completion: @escaping (Result<WeatherResponse, WeatherError>) -> Void) {
         let urlString = "\(weatherURL)&q=\(cityName.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? cityName)"
